@@ -10,7 +10,7 @@ st.write(
 )
 
 order_name = st.text_input('Name on Smoothie:')
-st.write('The name on your Smoothie will be: ',order_name)
+st.write('The name on your Smoothie will be XD: ',order_name)
 
 
 cnx = st.connection("snowflake")
