@@ -10,7 +10,7 @@ st.write(
 )
 
 order_name = st.text_input('Name on Smoothie:')
-st.write('The name on your Smoothie will be XD: ',order_name)
+st.write('The name on your Smoothie will be: ',order_name)
 
 
 cnx = st.connection("snowflake")
@@ -28,7 +28,7 @@ if ingredients_list:
     ingredients_string = ''
     for x in ingredients_list:
         ingredients_string += x + ' '
-        st.subheader(x + 'Nutrition Information')
+        st.subheader(x + ' Nutrition Information')
         fruityvice_response = requests.get(f"https://fruityvice.com/api/fruit/{x}")
         fv_df = st.dataframe(data=fruityvice_response.json(),use_container_width=True)
     
